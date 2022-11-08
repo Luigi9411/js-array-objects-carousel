@@ -71,7 +71,7 @@ const arrImages = [
  
  for (let i = 0; i < arrImages.length; i++) {
 	 const eleImg = document.createElement('img');
-	 eleImg.src = arrImages[i];
+	 eleImg.src = `img/${arrImages[i].image}`;
 	 eleImg.classList.add('slider-img');
  
 	 if (i === 0) {
@@ -81,7 +81,7 @@ const arrImages = [
 	 eleSlider.append(eleImg);
  
 	 const eleThumb = document.createElement('img');
-	 eleThumb.src = arrImages[i];
+	 eleThumb.src = `img/${arrImages[i].image}`;
 	 eleThumb.classList.add('thumb-img');
 	 if (i === 0) {
 		 eleThumb.classList.add('active');
