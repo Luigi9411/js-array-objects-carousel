@@ -73,12 +73,22 @@ const arrImages = [
 	 const eleImg = document.createElement('img');
 	 eleImg.src = `img/${arrImages[i].image}`;
 	 eleImg.classList.add('slider-img');
- 
+	 eleImg.alt = arrImages[i].title;
+	 const eleText = document.createElement('div');
+	 eleText.classList.add('text');
+	 eleText.innerHTML = `
+	   <h2>${arrImages[i].title}</h2>
+	   <p>${arrImages[i].text}</p>
+	 `;
+	 
 	 if (i === 0) {
 		 eleImg.classList.add('active');
+		 eleText.classList.add('active');
 	 }
- 
+
+	 
 	 eleSlider.append(eleImg);
+	 eleSlider.append(eleText);
  
 	 const eleThumb = document.createElement('img');
 	 eleThumb.src = `img/${arrImages[i].image}`;
@@ -92,6 +102,7 @@ const arrImages = [
  
  const listEleImg = document.querySelectorAll('.slider-img'); 
  const listThumbs = document.querySelectorAll('.thumb-img');
+ const listEleText = document.querySelectorAll('.text')
  
  let activeIndex = 0;
  
@@ -101,6 +112,7 @@ const arrImages = [
 	 
 	 listEleImg[activeIndex].classList.remove('active');
 	 listThumbs[activeIndex].classList.remove('active');
+	 listEleText[activeIndex].classList.remove('active');
 	 
 	 activeIndex++;
 	 if (activeIndex === listEleImg.length) {
@@ -109,6 +121,7 @@ const arrImages = [
 	 
 	 listEleImg[activeIndex].classList.add('active');
 	 listThumbs[activeIndex].classList.add('active');
+	 listEleText[activeIndex].classList.add('active');
 	 ;
  });
  
@@ -116,6 +129,7 @@ const arrImages = [
 	 
 	 listEleImg[activeIndex].classList.remove('active');
 	 listThumbs[activeIndex].classList.remove('active');
+	 listEleText[activeIndex].classList.remove('active');
 	 
 	 if (activeIndex === 0) {
 		 activeIndex = listEleImg.length;
@@ -125,6 +139,6 @@ const arrImages = [
 	 
 	 listEleImg[activeIndex].classList.add('active');
 	 listThumbs[activeIndex].classList.add('active');
-	 
+	 listEleText[activeIndex].classList.add('active');
 	 
  });

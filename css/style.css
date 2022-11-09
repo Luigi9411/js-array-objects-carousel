@@ -68,8 +68,7 @@ body {
 }
 
 .slider .slider-img {
-	position: absolute;
-	inset: 0;
+	
 	display: none;
 	width: 75%;
 	height: 100%;
@@ -107,4 +106,18 @@ body {
 .slider .thumb-img.active {
 	
 	filter: brightness(1);
+}
+
+.text{
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	display: none;
+	width: 75%;
+	color: white;
+}
+
+.text.active {
+	display: block;
 }
