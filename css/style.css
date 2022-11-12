@@ -7,6 +7,7 @@
 body {
 	display: flex;
 	height: 100vh;
+	background-color: black;
 }
 
 .slider {
@@ -121,3 +122,26 @@ body {
 .text.active {
 	display: block;
 }
+
+.btns{
+	text-align: center;
+	padding: 3em ;
+}
+
+.btn-invert{
+	margin-left: 4em;
+	padding: 1.5em 2.5em;
+	border-radius: 20px;
+	text-transform: uppercase;
+	border: .2em solid brown;
+	background-color: rgb(188, 162, 106);
+}
+
+.btn-start-stop{
+	padding: 1.5em 2.5em;
+	border-radius: 20px;
+	text-transform: uppercase;
+	border: .2em solid brown;
+	background-color: rgb(188, 162, 106);
+}
+
